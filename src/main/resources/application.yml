@@ -1,3 +1,4 @@
+server.port: 8080
 
 spring:
   datasource:
@@ -7,6 +8,12 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: update #drop
     properties:
       hibernate.format_sql: true
+      
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
